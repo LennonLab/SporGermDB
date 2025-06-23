@@ -138,8 +138,11 @@ submission <- content(r, as = "parsed")
 ## see: https://www.uniprot.org/help/return_fields 
 ## you will be re-requesting this data with additional metadata later in the code, so no need to add additional url_fields requirements in this code chunk
 
-url_fields <- c("accession", "reviewed", "protein_name","gene_names")
-url_fields <- paste(url_fields, collapse = ",")
+
+### redundant code, remove?
+
+#url_fields <- c("accession", "reviewed", "protein_name","gene_names")
+#url_fields <- paste(url_fields, collapse = ",")
 
 
 if (isJobReady(submission[["jobId"]])) {
